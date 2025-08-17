@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fa" dir="rtl" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>اعضا | مدیریت باشگاه</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap&subset=arabic" rel="stylesheet">
+  <link href="https://fonts.bunny.net/css?family=Vazirmatn:300,400,500,700,800&display=swap" rel="stylesheet">
+  <script>(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d)){document.documentElement.classList.add('dark')}}catch(e){}})()</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: { brand: {50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a'} }, fontFamily: { sans: ['Vazirmatn','ui-sans-serif','system-ui','Segoe UI','Roboto','Ubuntu','Cantarell','Noto Sans','sans-serif'] } } }
+    };
+  </script>
+  <style>
+    ::-webkit-scrollbar{width:10px;height:10px}
+    ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:9999px}
+    html.dark ::-webkit-scrollbar-thumb{background:#334155}
+  </style>
+  <link rel="icon" href="data:,">
+  <meta name="color-scheme" content="light dark" />
+</head>
+<body class="h-full font-sans bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+  <div class="min-h-screen flex">
+    <aside id="sidebar" class="fixed md:static inset-y-0 right-0 z-40 w-72 transform md:transform-none translate-x-full md:translate-x-0 transition-transform duration-200 bg-white/80 dark:bg-slate-800/80 backdrop-blur border-l md:border-l-0 md:border-r border-slate-200 dark:border-slate-700">
+      <div class="h-16 flex items-center justify-between px-4 border-b border-slate-200 dark:border-slate-700">
+        <div class="flex items-center gap-2">
+          <div class="size-9 grid place-items-center rounded-lg bg-brand-600 text-white font-bold">GYM</div>
+          <span class="font-extrabold">باشگاه من</span>
+        </div>
+        <button id="closeSidebar" class="md:hidden p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700" aria-label="بستن منو">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="p-4 space-y-1 overflow-y-auto h-[calc(100vh-4rem)]">
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/60" href="index.html">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M3 12l9-9 9 9M4 10v10h6V14h4v6h6V10"/></svg>
+          <span>داشبورد</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-brand-50 dark:bg-slate-700/60 text-brand-700 dark:text-white" href="members.html">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M8 7a4 4 0 108 0 4 4 0 10-8 0z"/><path stroke-width="2" d="M6 21v-2a6 6 0 1112 0v2"/></svg>
+          <span>اعضا</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/60" href="classes.html"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg><span>کلاس‌ها</span></a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/60" href="subscriptions.html"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M3 10h18M7 15h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg><span>اشتراک‌ها</span></a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/60" href="reports.html"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M12 6v6l4 2"/></svg><span>گزارش‌ها</span></a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/60" href="profile.html"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M12 12a5 5 0 100-10 5 5 0 000 10zM12 14a7 7 0 00-7 7"/></svg><span>پروفایل</span></a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/60" href="settings.html"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M12 3v18m9-9H3"/></svg><span>تنظیمات</span></a>
+      </nav>
+    </aside>
+
+    <div class="flex-1 flex flex-col min-w-0">
+      <header class="sticky top-0 z-30 bg-white/70 dark:bg-slate-900/70 backdrop-blur border-b border-slate-200 dark:border-slate-700">
+        <div class="h-16 px-4 flex items-center gap-3 justify-between">
+          <div class="flex items-center gap-2">
+            <button id="openSidebar" class="md:hidden p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700" aria-label="باز کردن منو">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </button>
+            <h1 class="text-lg font-bold">اعضا</h1>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="relative max-[510px]:hidden">
+              <input class="peer w-56 md:w-72 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-10 py-2 text-sm placeholder:text-slate-400  focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="جستجو در اعضا..." />
+              <svg class="size-5 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M21 21l-4.35-4.35M10 18a8 8 0 110-16 8 8 0 010 16z"/></svg>
+            </div>
+            <button id="themeToggle" class="p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="تغییر تم">
+              <svg class="size-5 hidden dark:block" viewBox="0 0 24 24" fill="currentColor"><path d="M17.75 15a7.75 7.75 0 01-8.5-8.5A8 8 0 1017.75 15z"/></svg>
+              <svg class="size-5 dark:hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a1 1 0 011 1v2a1 1 0 01-2 0V3a1 1 0 011-1zm0 17a1 1 0 011 1v2a1 1 0 01-2 0v-2a1 1 0 011-1zm9-7a1 1 0 01-1 1h-2a1 1 0 010-2h2a1 1 0 011 1zM6 12a1 1 0 01-1 1H3a1 1 0 010-2h2a1 1 0 011 1zm12.95 6.364a1 1 0 00-1.414 0l-1.414 1.414a1 1 0 101.414 1.414l1.414-1.414a1 1 0 000-1.414zM7.05 4.222a1 1 0 00-1.414 0L4.222 5.636a1 1 0 101.414 1.414L7.05 5.636a1 1 0 000-1.414zM19.778 4.222a1 1 0 010 1.414L18.364 7.05a1 1 0 01-1.414-1.414l1.414-1.414a1 1 0 011.414 0zM5.636 18.364a1 1 0 010 1.414L4.222 21.192a1 1 0 01-1.414-1.414l1.414-1.414a1 1 0 011.414 0z"/></svg>
+            </button>
+            <img class="size-9 rounded-xl object-cover ring-2 ring-slate-200 dark:ring-slate-700" src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=96&auto=format&fit=crop" alt="avatar" />
+          </div>
+        </div>
+      </header>
+
+      <main class="p-4 md:p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="text-sm text-slate-500">مدیریت اعضا</div>
+          <div class="flex gap-2">
+            <button class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">خروجی CSV</button>
+            <button class="px-3 py-1.5 rounded-xl bg-brand-600 text-white hover:bg-brand-700 text-sm">افزودن عضو</button>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
+          <div class="p-3 sm:p-4 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+            <div class="flex gap-2 text-sm">
+              <button class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700">همه</button>
+              <button class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">فعال</button>
+              <button class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">رو به اتمام</button>
+              <button class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">غیرفعال</button>
+            </div>
+            <div class="relative">
+              <input class="peer w-64 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 px-10 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="جستجو بر اساس نام یا شماره..." />
+              <svg class="size-5 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" d="M21 21l-4.35-4.35M10 18a8 8 0 110-16 8 8 0 010 16z"/></svg>
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-sm">
+              <thead class="bg-slate-50 dark:bg-slate-900/50">
+                <tr class="text-right text-slate-500">
+                  <th class="px-4 py-3">نام</th>
+                  <th class="px-4 py-3">شماره تماس</th>
+                  <th class="px-4 py-3">اشتراک</th>
+                  <th class="px-4 py-3">وضعیت</th>
+                  <th class="px-4 py-3">آخرین فعالیت</th>
+                  <th class="px-4 py-3">عملیات</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                  <td class="px-4 py-3">علی محمدی</td>
+                  <td class="px-4 py-3">0912-123-4567</td>
+                  <td class="px-4 py-3">ماهانه</td>
+                  <td class="px-4 py-3"><span class="px-2 py-0.5 rounded-full text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">فعال</span></td>
+                  <td class="px-4 py-3 text-slate-500">۵ روز پیش</td>
+                  <td class="px-4 py-3 space-x-reverse space-x-2"><button class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-700">ویرایش</button><button class="px-2 py-1 rounded bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300">حذف</button></td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                  <td class="px-4 py-3">سارا کریمی</td>
+                  <td class="px-4 py-3">0935-555-7788</td>
+                  <td class="px-4 py-3">سه‌ماهه</td>
+                  <td class="px-4 py-3"><span class="px-2 py-0.5 rounded-full text-xs bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">رو به اتمام</span></td>
+                  <td class="px-4 py-3 text-slate-500">۲ روز پیش</td>
+                  <td class="px-4 py-3 space-x-reverse space-x-2"><button class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-700">تمدید</button><button class="px-2 py-1 rounded bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300">حذف</button></td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                  <td class="px-4 py-3">مهدی شمس</td>
+                  <td class="px-4 py-3">0913-222-3344</td>
+                  <td class="px-4 py-3">سالانه</td>
+                  <td class="px-4 py-3"><span class="px-2 py-0.5 rounded-full text-xs bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200">غیرفعال</span></td>
+                  <td class="px-4 py-3 text-slate-500">۲۰ روز پیش</td>
+                  <td class="px-4 py-3 space-x-reverse space-x-2"><button class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-700">نمایش</button><button class="px-2 py-1 rounded bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300">حذف</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    var themeToggle = document.getElementById('themeToggle');
+    themeToggle && themeToggle.addEventListener('click', function(){var r=document.documentElement;r.classList.toggle('dark');localStorage.setItem('theme', r.classList.contains('dark')?'dark':'light')});
+    var openSidebar = document.getElementById('openSidebar');
+    var closeSidebar = document.getElementById('closeSidebar');
+    var sidebar = document.getElementById('sidebar');
+    openSidebar && openSidebar.addEventListener('click', function(){sidebar.classList.remove('translate-x-full')});
+    closeSidebar && closeSidebar.addEventListener('click', function(){sidebar.classList.add('translate-x-full')});
+  </script>
+</body>
+</html>
+
