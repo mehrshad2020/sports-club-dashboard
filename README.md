@@ -1,6 +1,10 @@
 # داشبورد مدیریت باشگاه ورزشی
 
 یک داشبورد کامل و زیبا برای مدیریت باشگاه‌های ورزشی با استفاده از HTML، CSS (Tailwind CSS)، و JavaScript.
+<img width="1891" height="901" alt="image" src="https://github.com/user-attachments/assets/249d9100-ef6a-4d19-a274-1ce416f86121" />
+<img width="1902" height="874" alt="image" src="https://github.com/user-attachments/assets/fadc9391-f124-437f-8b33-3087cbeef10c" />
+
+
 
 ## ویژگی‌ها
 
@@ -160,4 +164,5 @@ localStorage.setItem('theme', isDark ? 'light' : 'dark');
 **نسخه**: 1.0.0  
 **آخرین به‌روزرسانی**: 2024  
 **زبان**: فارسی (Persian/Farsi)
+
 
